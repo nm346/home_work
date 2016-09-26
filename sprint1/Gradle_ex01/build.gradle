@@ -1,0 +1,9 @@
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.0'
+}
+
+// EXERCISE A 
+
+// EXERCISE B
+
+// EXERCISE C
