@@ -24,7 +24,7 @@ The build script uses the following plugins:
 * [application](https://docs.gradle.org/current/userguide/application_plugin.html): to run Java console applications, as explained [in this Pluralsight video](https://app.pluralsight.com/player?course=gradle-fundamentals&author=kevin-jones&name=gradle-fundamentals-m5&clip=5&mode=live); and
 * [eclipse](https://docs.gradle.org/current/userguide/eclipse_plugin.html): to configure the eclipse workpace using `./gradlew -q eclipse`.
 
-## Exercise (*)
+## Exercise (:star:)
 
 Configure the gradle build script required to run a small program in Java that uses [log4j 1.2.17](https://logging.apache.org/log4j/1.2/manual.html), [available from Maven Central](http://mvnrepository.com/artifact/log4j/log4j/1.2.17), by adding the corresponding dependency.
 
