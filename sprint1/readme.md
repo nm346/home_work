@@ -11,7 +11,7 @@ The sprint for the following two weeks is structured as follows:
 
 The spreadsheet containing the **sprint backlog** for this phase can be used to track the progress made throughout the sprint in order to help you manage your time.
 
-At the end of this page you will find a [jargon buster](#jargon) on terms that may be new to you.
+At the end of this page you will find a jargon buster on terms that may be new to you.
 
 ## Software develoment methodologies
 
