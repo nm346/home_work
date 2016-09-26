@@ -98,9 +98,9 @@ In this unit, we are going to focus on automating software builds with Gradle ba
 
 ## Jargon buster <a name="jargon"></a>
 
-| term  | definition                               | source |
-|-------|------------------------------------------|--------|
+| term  | definition | source |
+|-------|------------|--------|
 | software development methodology | A methodology specifies the process to be executed, usually as a set of related activities, tasks and/or techniques, together with the work products that must be manipulated (created, used or changed) at each moment and by whom, possibly including models, documents and other inputs and outputs. In turn, specifying the models that must be dealt with implies defining the basic building blocks that should be used to construct. |  [wikipedia](https://en.wikipedia.org/wiki/Software_development_process) |
-| sprint | A sprint (or iteration) is the basic unit of development in Scrum. The Sprint is a timeboxed effort; that is, it is restricted to a specific duration. The duration is fixed in advance for each Sprint and is normally between one week and one month, with two weeks being the most common. | [wikipedia](https://en.wikipedia.org/wiki/Scrum_(software_development&#41;#Workflow) |
+| sprint | A sprint (or iteration) is the basic unit of development in Scrum. The Sprint is a timeboxed effort; that is, it is restricted to a specific duration. The duration is fixed in advance for each Sprint and is normally between one week and one month, with two weeks being the most common. | [wikipedia](https://en.wikipedia.org/wiki/Scrum_&#40;software_development&#41;#Workflow) |
 | sprint backlog | The sprint backlog is a list of tasks to be completed during the sprint. | [mountaingoatsoftware](https://www.mountaingoatsoftware.com/agile/scrum/sprint-backlog) |
 | software build | Process of automating the creation of a software build and the associated processes including: compiling computer source code into binary code, packaging binary code, and running automated tests. | [wikipedia](https://en.wikipedia.org/wiki/Build_automation) |
