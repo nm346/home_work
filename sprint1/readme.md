@@ -55,14 +55,14 @@ In this unit, we are going to become familiar with the main phases of software d
   * pros/cons
   * where it is recommended/discouraged to use it
 
-### 4. Pluralsight resources
+### Pluralsight resources
 * :movie_camera: [Waterfall Fundamentals and Its Problems](https://app.pluralsight.com/player?course=agile-fundamentals&author=stephen-haunts&name=agile-fundamentals-m2&clip=0&mode=live)
 * :movie_camera: [What is agile all about?](https://app.pluralsight.com/player?course=agile-fundamentals&author=stephen-haunts&name=agile-fundamentals-m3&clip=0&mode=live)
 * :movie_camera: [Common agile misconceptions](https://app.pluralsight.com/player?course=agile-fundamentals&author=stephen-haunts&name=agile-fundamentals-m4&clip=0&mode=live)
 * :movie_camera: [Advantages and disadvantages](https://app.pluralsight.com/player?course=agile-fundamentals&author=stephen-haunts&name=agile-fundamentals-m5&clip=2&mode=live)
 * :black_nib: [Learning check](https://app.pluralsight.com/library/courses/agile-fundamentals/learning-check)
 
-## 5. Groovy
+## 4. Groovy
 
 In this unit, we are going to cover the basics of Groovy's syntax so as to be able to read and write Gradle build scripts. We are going to focus on:
 * What is Groovy? What are its main features?
@@ -83,7 +83,7 @@ In this unit, we are going to cover the basics of Groovy's syntax so as to be ab
 * :black_nib: [Learning check](https://app.pluralsight.com/library/courses/groovy-fundamentals/learning-check)
 * :computer: [Exercises with Groovy](./Groovy_exercises/readme.md)
 
-## Automating builds with Gradle
+## 5. Automating builds with Gradle
 
 In this unit, we are going to focus on automating software builds with Gradle based on what we have learnt about software development methodologies and Groovy. In particular, when going through Pluralsight resources, we are going to focus on:
 * What is Gradle?
