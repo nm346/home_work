@@ -5,15 +5,39 @@
 In this phase, we are going to focus on the main phases and principles behind common software development methodologies. We will analyse common software development practices from a critical point of view and we will use specific tools to manage software development. Namely, we will use Gradle for automating software builds.
 
 The sprint for the following two weeks is structured as follows:
-* First, we will cover software development methodologies.
-* Second, we will learn Groovy, a scripting language used to program Gradle build scripts.
-* Third, we will learn how to program Gradle build scripts using Groovy for Java projects.
+1. We will revise the Eclipse IDE (named Spring Tool Suite in the labs)
+2. We will set up the GitHub repository
+3. We will cover software development methodologies.
+4. We will learn Groovy, a scripting language used to program Gradle build scripts.
+5. We will learn how to program Gradle build scripts using Groovy for Java projects.
 
 The spreadsheet containing the **sprint backlog** for this phase can be used to track the progress made throughout the sprint in order to help you manage your time.
 
 At the end of this page you will find a jargon buster on terms that may be new to you.
 
-## Software develoment methodologies
+## 1. Eclipse (revision) - optional but recommended
+
+* :movie_camera: [Why Eclipse?](https://app.pluralsight.com/player?course=eclipse-guided-tour-part1&author=tod-gentille&name=eclipse-guided-tour-part1-m1&clip=2&mode=live)
+* :movie_camera: [The workspace - launching Eclipse](https://app.pluralsight.com/player?course=eclipse-guided-tour-part1&author=tod-gentille&name=eclipse-guided-tour-part1-m1&clip=7&mode=live)
+* :movie_camera: [Eclipse workbench overview (skip c++ sections)](https://app.pluralsight.com/player?course=eclipse-guided-tour-part1&author=tod-gentille&name=eclipse-guided-tour-part1-m2&clip=0&mode=live)
+* :movie_camera: [Demo: Importing Java Sample Files: importing files into your workspace](https://app.pluralsight.com/player?course=eclipse-guided-tour-part1&author=tod-gentille&name=eclipse-guided-tour-part1-m3&clip=1&mode=live)
+* :movie_camera: [Package/project explorer (first three minutes)](https://app.pluralsight.com/player?course=eclipse-guided-tour-part1&author=tod-gentille&name=eclipse-guided-tour-part1-m3&clip=3&mode=live)
+
+## 2. Setting up your GitHub repository
+
+Follow these steps:
+* Create an account on GitHub if you don't have one already
+* Accept [this invitation]() with your GitHub account
+* On the STS (Eclipse):
+  * Create a workspage
+  * In Git perspective: clone repository using the url of your repository `https://github.com/uol-inf/co2006-16-17-<username>.git`, where `<username>` corresponds to your GitHub username.
+  * In the Java perspective, in your workspace, import the project `Groovy_exercises` as an Eclipse project
+  * Solve the exercises in the `src` folder
+  * You can check where your project is in the filesystem by using the terminal console: 
+    * `right click on project > show in > terminal`
+    * run the command `pwd`
+
+## 3. Software develoment methodologies
 
 In this unit, we are going to become familiar with the main phases of software development and the principles behind the main software development methodologies. In the lectures below, we are going to focus on:
 * waterfall methodology:
@@ -31,14 +55,14 @@ In this unit, we are going to become familiar with the main phases of software d
   * pros/cons
   * where it is recommended/discouraged to use it
 
-### Pluralsight resources
+### 4. Pluralsight resources
 * :movie_camera: [Waterfall Fundamentals and Its Problems](https://app.pluralsight.com/player?course=agile-fundamentals&author=stephen-haunts&name=agile-fundamentals-m2&clip=0&mode=live)
 * :movie_camera: [What is agile all about?](https://app.pluralsight.com/player?course=agile-fundamentals&author=stephen-haunts&name=agile-fundamentals-m3&clip=0&mode=live)
 * :movie_camera: [Common agile misconceptions](https://app.pluralsight.com/player?course=agile-fundamentals&author=stephen-haunts&name=agile-fundamentals-m4&clip=0&mode=live)
 * :movie_camera: [Advantages and disadvantages](https://app.pluralsight.com/player?course=agile-fundamentals&author=stephen-haunts&name=agile-fundamentals-m5&clip=2&mode=live)
 * :black_nib: [Learning check](https://app.pluralsight.com/library/courses/agile-fundamentals/learning-check)
 
-## Groovy
+## 5. Groovy
 
 In this unit, we are going to cover the basics of Groovy's syntax so as to be able to read and write Gradle build scripts. We are going to focus on:
 * What is Groovy? What are its main features?
@@ -54,7 +78,7 @@ In this unit, we are going to cover the basics of Groovy's syntax so as to be ab
 * :movie_camera:  [Introduction](https://app.pluralsight.com/player?course=groovy-fundamentals&author=jeremy-jarrell&name=groovy-fundamentals-m1&clip=0&mode=live): General introduction and motivation for scripting languages.
 * :movie_camera: [Basic syntax](https://app.pluralsight.com/player?course=groovy-fundamentals&author=jeremy-jarrell&name=groovy-fundamentals-m2&clip=0&mode=live): You should get familiar with the syntax in order to be able to read and customize Gradle build scripts.
 * :computer: Check the [examples used in Pluralsight](https://app.pluralsight.com/library/courses/groovy-fundamentals/exercise-files).
-*
+
 ### Exercises
 * :black_nib: [Learning check](https://app.pluralsight.com/library/courses/groovy-fundamentals/learning-check)
 * :computer: [Exercises with Groovy](./Groovy_exercises/readme.md)
