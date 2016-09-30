@@ -5,6 +5,7 @@
 In this phase, we are going to focus on the main phases and principles behind common software development methodologies. We will analyse common software development practices from a critical point of view and we will use specific tools to manage software development. Namely, we will use Gradle for automating software builds.
 
 The sprint for the following two weeks is structured as follows:
+
 1. We will revise the Eclipse IDE (named Spring Tool Suite in the labs)
 2. We will set up the GitHub repository
 3. We will cover software development methodologies.
