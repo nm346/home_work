@@ -120,7 +120,7 @@ In this unit, we are going to focus on automating software builds with Gradle ba
 * :computer: [Exercise 1](./Gradle_ex01/readme.md) (**Gradle tasks and dependencies**)
 * :computer: [Exercise 2](./Gradle_ex02/readme.md) (**Java builds and Java libraries**)
 
-## Jargon buster <a name="jargon"></a>
+## 6. Jargon buster <a name="jargon"></a>
 
 | term  | definition | source |
 |-------|------------|--------|
