@@ -36,6 +36,11 @@ Follow these steps:
   * You can check where your project is in the filesystem by using the terminal console: 
     * `right click on project > show in > terminal`
     * run the command `pwd`
+* In the following screencast, we illustrate how to set up your git repository:
+<iframe src="https://leicester.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5d72f26c-39b4-47d3-a316-103fc7f94110&v=1" width="720" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0"></iframe>
+* In the following screencast, we show how to push your first commit to upstream (GitHub):
+<iframe src="https://leicester.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=be8330e9-b92c-4014-ad7d-3d52d8663d1b&v=1" width="720" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0"></iframe>
+
 
 ## 3. Software develoment methodologies
 
