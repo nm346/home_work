@@ -9,8 +9,4 @@ If you do not write your username below, your coursework will not be marked.
 UoL username: <nm346>
 --------------------------------------------------------------------------
 
-Example: 
-
-UoL username: ab123 
-
-.
+UoL username: nm346
