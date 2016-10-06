@@ -11,7 +11,9 @@ for(fruit in ["orange","banana","coconut"]){
 }
 // ex 03 (*). define a function that given a range of integers, 
 // determines the average
-
+def determineAverage(list) {
+def avg = list.sum() / list.size()
+}
 
 // ex 04 (**). using a closure check whether fruitBag 
 // contains 'banana' 
