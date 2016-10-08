@@ -19,7 +19,8 @@ list.sum()/list.size()
 
 // ex 04 (**). using a closure check whether fruitBag 
 // contains 'banana' 
-  ["orange","banana","coconut"].find{it == "banana"}
+  ["orange","banana","coconut"].find{it = "banana"}
+//if it contains banana it returns the word banana.
 
 // ex 05 (**). using a closure check whether all the words
 // in fruitBag contain the letter 'n'
