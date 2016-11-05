@@ -1,6 +1,4 @@
-/**
- * (C) Artur Boronat, 2015
- */
+
 package labJstl.controller;
 
 import java.util.ArrayList;
