@@ -1,3 +1,4 @@
-GitRepositoriesView.GitDirectories=/var/autofs/home/s_home/nm346/git/co2006-16-17-nm346/.git\:
-GitRepositoriesView.GitDirectories.relative=.git\:
+GitRepositoriesView.GitDirectories=/var/autofs/home/s_home/nm346/git/CO2006-16-17/.git\:/var/autofs/home/s_home/nm346/git/co2006-16-17-nm346/.git\:
+GitRepositoriesView.GitDirectories.relative=/var/autofs/home/s_home/nm346/git/CO2006-16-17/.git\:.git\:
+RepositorySearchDialogSearchPath=/s_home/nm346/git
 eclipse.preferences.version=1
