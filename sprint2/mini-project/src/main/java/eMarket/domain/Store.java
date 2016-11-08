@@ -8,6 +8,8 @@ import java.util.List;
 
 public class Store {
 	List<Product> productList = new ArrayList<>();
+	List<Order> orderList = new ArrayList<>();
+	List<Item> itemList = new ArrayList<>();
 	
 	public void init() {
 		productList = new ArrayList<>();
@@ -21,4 +23,28 @@ public class Store {
 	public List<Product> getProductList() {
 		return productList;
 	}
+	
+	public void init1() {
+		orderList = new ArrayList<>();
+		Order.lastId=0;
+	}
+
+	public void setOrderList(List<Order> orderList) {
+		this.orderList = orderList;
+	}
+	
+	public List<Order> getOrderList() {
+		return orderList;
+	}
+	
+	
+	public void init2(){
+		itemList = new ArrayList<>();
+		Item.lastId=0;	
+		}
+	
+	public void setItemList(List<Item> itemList){
+		this.itemList = itemList;
+	}
 }
+
