@@ -1,22 +1,49 @@
 
 package eMarket.domain;
 
-
 public class Item {
 
 	public static int lastId = 0;
-    private int id = -1;
-    private String Date;
-    private String description;
-    private Double price;
-    
-    public Item(){}
-    
-    public Item(int id, String Date, String description, Double price) {
+	private int id = -1;
+	private String name;
+	private String description;
+	private double price;
+	public int amount;
+	private int orderId = -1;
+	private int productId;
+
+	public Item() {
+	}
+
+	public Item(int amount, int orderId, int productId, int parentOrderId) {
 		this.setId(id);
-		this.setDate(Date);
+		this.setProductId(productId);
+		this.setAmount(amount);
+		this.setOrderId(parentOrderId);
+	}
+
+	public void setProductId(int productId) {
+		this.productId = productId;
+
+	}
+
+	public int getProductId() {
+		return this.productId;
+	}
+
+	public Item(int id, String name, String description, double price) {
+		this.setId(id);
+		this.setName(name);
 		this.setDescription(description);
 		this.setPrice(price);
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	public int getAmount() {
+		return amount;
 	}
 
 	public void setId() {
@@ -32,12 +59,12 @@ public class Item {
 		this.id = id;
 	}
 
-	public String getDate() {
-		return Date;
+	public String getName() {
+		return name;
 	}
 
-	public void setDate(String Date) {
-		this.Date = Date;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getDescription() {
@@ -48,13 +75,20 @@ public class Item {
 		this.description = description;
 	}
 
-	public Double getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
+	public void setOrderId(int id) {
+		this.orderId = id++;
+	}
+
+	public int getOrderId() {
+		return this.orderId;
+	}
 
 }

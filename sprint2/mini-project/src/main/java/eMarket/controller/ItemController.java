@@ -1,67 +1,69 @@
 
-	package eMarket.controller;
+package eMarket.controller;
 
-	import org.springframework.stereotype.Controller;
-	import org.springframework.ui.Model;
-	import org.springframework.web.bind.annotation.ExceptionHandler;
-	import org.springframework.web.bind.annotation.ModelAttribute;
-	import org.springframework.web.bind.annotation.RequestMapping;
-	import org.springframework.web.bind.annotation.RequestMethod;
-	import org.springframework.web.bind.annotation.RequestParam;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-	import eMarket.EMarketApp;
-	import eMarket.domain.Item;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
-	@Controller
-	@RequestMapping("/item")
-	public class ItemController {
+import eMarket.EMarketApp;
+import eMarket.domain.*;
 
-	    @RequestMapping("/detail")
-	    public String index(Model model) {
-	    	model.addAttribute("ItemList", EMarketApp.getStore().getProductList());
-	        return "form/itemDetail";
-	    } 
-	    /*
-	    
-	    @RequestMapping(value = "/ItemDetail", method = RequestMethod.GET)
-	    public String ItemDetail(@ModelAttribute("Item") Item item, @RequestParam(value="ItemId", required=false, defaultValue="-1") int ItemId) {
-	    	if (ItemId >= 0) {
-	    		// modify
-	    		Item p2 = EMarketApp.getStore().getItemList().stream().filter(p -> (((Item) p).getId() == ItemId)).findAny().get();
-	    		Item.setId(p2.getId());
-	    		if (p2.getDate().equals("")) 
-	    			throw new SpringException("Date is empty.");
-	    		Item.setDate(p2.getDate());
-	    		Item.setDescription(p2.getDescription());
-	    		if (p2.getPrice() < 0.0) 
-	    			throw new SpringException("Value is negative.");
-	    		Item.setPrice(p2.getPrice());
-	    	} else {
-	    		// add
-	    		Item.setId();
-	    	}
-	    	return "form/ItemDetail";
-	    }   
-	    
-	    @RequestMapping(value = "/add", method = RequestMethod.POST)
-	    public String ItemMaster(@ModelAttribute("Item") Item item, Model model) {
-	    	if (item.getPrice() < 0.0) 
-				throw new SpringException("Value is negative.");
-			if (item.getDate().equals("")) 
-				throw new SpringException("Date is empty.");    	
+@Controller
+@RequestMapping("/item")
+public class ItemController {
 
-	    	EMarketApp.getStore().getItemList().removeIf(p -> (p.getId() == item.getId()));
-	    	EMarketApp.getStore().getItemList().add(item);
-	   		
-	    	model.addAttribute("ItemList", EMarketApp.getStore().getItemList());
-	        return "form/ItemMaster";
-	    }   
+	@RequestMapping(value = "/detail", method = RequestMethod.GET)
+	public String productDetail(Model model,
+			@RequestParam(value = "productId", required = false, defaultValue = "-1") int productId,
+			@RequestParam(value = "orderId", required = false, defaultValue = "-1") int orderId) {
 
-	    @RequestMapping(value = "/delete", method = RequestMethod.GET)
-	    public String ItemMaster(@RequestParam(value="ItemId", required=false, defaultValue="-1") int ItemId, Model model) {
-	    	EMarketApp.getStore().getItemList().removeIf(p -> (p.getId() == itemId));
-	    	model.addAttribute("ItemList", EMarketApp.getStore().getItemList());
-	    	return "form/ItemMaster";
-	    }  */ 
-	    
+		HashMap<String, String> product = new HashMap<String, String>();
+		for (int i = 0; i < EMarketApp.getStore().getProductList().size(); i++) {
+			product.put(Integer.toString(EMarketApp.getStore().getProductList().get(i).getId()),
+					EMarketApp.getStore().getProductList().get(i).getName());
+		}
+		if (productId != -1)
+			model.addAttribute("item", EMarketApp.getStore().getItemList().stream()
+					.filter(i -> (i.getOrderId() == orderId && i.getId() == productId)).findAny().get());
+		else
+			// model.addAttribute("item", new Item(Item.lastId++, orderId, -1,
+			// 0));
+			model.addAttribute("item", new Item(Item.lastId++, orderId, -1, 0));
+		// model.addAttribute("productList",
+		// EMarketApp.getStore().getProductList());
+		model.addAttribute("product", product);
+		return "form/itemDetail";
+	}
+	// int id, String name, String description, double price
+
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public String ItemMaster(@ModelAttribute("Item") Item item, Model model) {
+		if (item.getOrderId() < 0) {
+			throw new SpringException("ERROeR");
+		}
+
+		if (item.getOrderId() <= 0) {
+			throw new SpringException("Amount is low");
+		}
+
+		EMarketApp.getStore().getItemList()
+				.removeIf(p -> (p).getId() == item.getId() && p.getOrderId() == item.getOrderId());
+		EMarketApp.getStore().getItemList().add(item);
+
+		ArrayList<Item> items = new ArrayList<Item>();
+		EMarketApp.getStore().getItemList().stream().filter(i -> (i.getOrderId() == item.getOrderId()))
+				.forEach(i -> items.add(i));
+		model.addAttribute("Order", EMarketApp.getStore().getOrderList().stream()
+				.filter(o -> (o.getId() == item.getOrderId())).findAny().get());
+		model.addAttribute("ItemList", item);
+		return "form/orderDetail";
+	}
+
 }
+// item.setAmount(item.getAmount());

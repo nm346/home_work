@@ -24,6 +24,9 @@ public class Store {
 		return productList;
 	}
 	
+	public List<Item> getItemList() {
+		return itemList;
+	}
 	public void init1() {
 		orderList = new ArrayList<>();
 		Order.lastId=0;

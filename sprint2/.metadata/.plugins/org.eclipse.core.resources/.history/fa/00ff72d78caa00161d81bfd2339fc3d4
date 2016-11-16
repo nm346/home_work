@@ -1,0 +1,36 @@
+
+	package eMarket.controller;
+
+	import org.springframework.stereotype.Controller;
+	import org.springframework.ui.Model;
+	import org.springframework.web.bind.annotation.ExceptionHandler;
+	import org.springframework.web.bind.annotation.ModelAttribute;
+	import org.springframework.web.bind.annotation.RequestMapping;
+	import org.springframework.web.bind.annotation.RequestMethod;
+	import org.springframework.web.bind.annotation.RequestParam;
+
+	import eMarket.EMarketApp;
+	import eMarket.domain.Item;
+	import eMarket.domain.Product;
+	
+
+	@Controller
+	@RequestMapping("/item")
+	public class ItemController {
+
+	    @RequestMapping(value = "/detail")
+	    	public String productDetail(@ModelAttribute("product") Product product, Model model, @RequestParam(value="productId", required=false, defaultValue="-1") int productId){
+	    	
+	    	model.addAttribute("productList", EMarketApp.getStore().getProductList());
+	    	model.addAttribute("product", product);
+	    	return "form/itemDetail";
+	    	} 
+	    
+	    @RequestMapping(value = "/item/add", method = RequestMethod.POST, @RequestParam(value="productId", required=false, defaultValue="-1")) int itemId) {
+	    public String ItemMaster(@ModelAttribute("Item") Item item, Model model,) {
+	    	EMarketApp.getStore().getItemList().removeIf(p ->(((Item)p).getId == itemId));
+	    	
+	    	return "form/orderDetail";
+	    }    
+}
+}
