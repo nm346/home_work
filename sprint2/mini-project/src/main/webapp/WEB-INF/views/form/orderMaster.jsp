@@ -34,39 +34,31 @@
 <body>
 	<h2>All Orders</h2>
 	<section>
-		<a href="/order/detail" class="btn btn-default">Add new order</a> <a
-			href="/" class="btn btn-default">Main page</a>
+		<a href="/order/add" class="btn btn-default">Add a new order</a> 
+		<a href="/" class="btn btn-default">Main page</a>
 		<p />
 	</section>
 	<section>
 		<table class="TFtable">
 			<tr>
 				<td><h3>Id</h3></td>
-				<td><c:out value="${order.getId()}" /></td>
-
-
-				<td><h3>Name</h3></td>
-
-
+				<td><h3>Date</h3></td>
 				<td><h3>Description</h3></td>
-
-
 				<td><h3>Price</h3></td>
 				<td><h3>Amount</h3></td>
-				<td><h3>Cost</h3></td>
 				<td><h3></h3></td>
 				<td><h3></h3></td>
-				<td><a href="/order/orderDetail?orderId=${order.getId()}">Edit</a></td>
-				<td><a href="/order/delete?orderId=${order.getId()}">Delete</a></td>
+				<td><a href="/order/orderDetail?orderId=${Order.getId()}">Edit</a></td>
+				<td><a href="/order/delete?orderId=${Order.getId()}">Delete</a></td>
 			</tr>
 			<c:forEach items="${orderList}" var="order">
 				<tr>
-					<td><c:out value="${order.getId()}" /></td>
-					<td><c:out value="${order.getDate()}" /></td>
-					<td><c:out value="${order.getDescription()}" /></td>
-					<td><c:out value="${order.getPrice()}" /></td>
-					<td><a href="/order/orderDetail?orderId=${order.getId()}">Edit</a></td>
-					<td><a href="/order/delete?orderId=${order.getId()}">Delete</a></td>
+					<td><c:out value="${Order.getId()}" /></td>
+					<td><c:out value="${Order.getDate()}" /></td>
+					<td><c:out value="${Order.getDescription()}" /></td>
+					<td><c:out value="${Order.getPrice()}" /></td>
+					<td><a href="/order/orderDetail?orderId=${Order.getId()}">Edit</a></td>
+					<td><a href="/order/delete?orderId=${Order.getId()}">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>
